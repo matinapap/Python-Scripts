@@ -1,4 +1,4 @@
-# Ergasies
+# Python Scripts
 
 [![tests](https://github.com/matinapap/Ergasies/actions/workflows/tests.yml/badge.svg)](https://github.com/matinapap/Ergasies/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
