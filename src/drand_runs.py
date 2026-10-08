@@ -5,7 +5,7 @@ round's 256-bit randomness to binary, joins all of it into one bit string
 and reports the longest run of consecutive 0s and of consecutive 1s.
 
 Usage:
-    python -m ergasies.drand_runs --rounds 100
+    python -m src.drand_runs --rounds 100
 """
 
 from __future__ import annotations

@@ -7,7 +7,7 @@ Steps:
 4. Print how many of the remaining words have 1, 2, 3, ... letters.
 
 Usage:
-    python -m ergasies.word_lengths examples/sample.txt
+    python -m src.word_lengths examples/sample.txt
 """
 
 from __future__ import annotations

@@ -1,8 +1,8 @@
 import unittest
 from unittest.mock import patch
 
-from ergasies import drand_runs
-from ergasies.drand_runs import collect_bits, hex_to_bits, longest_runs
+from src import drand_runs
+from src.drand_runs import collect_bits, hex_to_bits, longest_runs
 
 
 class DrandRunsTest(unittest.TestCase):

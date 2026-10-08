@@ -1,7 +1,7 @@
 import random
 import unittest
 
-from ergasies.chess_attacks import Position, bishop_attacks, play, queen_attacks, rook_attacks
+from src.chess_attacks import Position, bishop_attacks, play, queen_attacks, rook_attacks
 
 
 class AttackTest(unittest.TestCase):

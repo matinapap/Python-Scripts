@@ -10,7 +10,7 @@ distinct squares of an 8x8 board. Rounds alternate between the two players:
 As in the original exercise, pieces do not block each other's line of attack.
 
 Usage:
-    python -m ergasies.chess_attacks --rounds 100 --seed 42 --show-boards
+    python -m src.chess_attacks --rounds 100 --seed 42 --show-boards
 """
 
 from __future__ import annotations

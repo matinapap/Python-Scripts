@@ -10,7 +10,7 @@ Steps:
    by 3, 5 and 7.
 
 Usage:
-    python -m ergasies.bit_patterns examples/sample.txt
+    python -m src.bit_patterns examples/sample.txt
 """
 
 from __future__ import annotations

@@ -1,6 +1,6 @@
 import unittest
 
-from ergasies.bit_patterns import char_nibble, divisibility_percentages, to_16bit_numbers
+from src.bit_patterns import char_nibble, divisibility_percentages, to_16bit_numbers
 
 
 class BitPatternsTest(unittest.TestCase):

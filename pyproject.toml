@@ -15,13 +15,13 @@ requires-python = ">=3.9"
 dev = ["pytest"]
 
 [project.scripts]
-word-lengths = "ergasies.word_lengths:main"
-chess-attacks = "ergasies.chess_attacks:main"
-bit-patterns = "ergasies.bit_patterns:main"
-drand-runs = "ergasies.drand_runs:main"
+word-lengths = "src.word_lengths:main"
+chess-attacks = "src.chess_attacks:main"
+bit-patterns = "src.bit_patterns:main"
+drand-runs = "src.drand_runs:main"
 
 [tool.setuptools]
-packages = ["ergasies"]
+packages = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

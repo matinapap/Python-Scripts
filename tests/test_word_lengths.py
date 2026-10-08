@@ -1,6 +1,6 @@
 import unittest
 
-from ergasies.word_lengths import format_histogram, length_histogram, remove_pairs, tokenize
+from src.word_lengths import format_histogram, length_histogram, remove_pairs, tokenize
 
 
 class TokenizeTest(unittest.TestCase):

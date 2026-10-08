@@ -14,10 +14,10 @@ on GitHub Actions.
 
 | Module | What it does | Concepts |
 | --- | --- | --- |
-| [`word_lengths`](ergasies/word_lengths.py) | Cleans a text file, removes pairs of words whose lengths sum to 20, and prints a histogram of the remaining word lengths | Text cleaning, `str.translate`, greedy pairing |
-| [`chess_attacks`](ergasies/chess_attacks.py) | Simulates rounds of a white rook and bishop against a black queen on random squares and scores each side's attacks | Monte Carlo simulation, dataclasses, seeded RNG |
-| [`bit_patterns`](ergasies/bit_patterns.py) | Encodes text as 7-bit codes, packs them into 16-bit numbers, and reports what share is even or divisible by 3, 5 and 7 | Binary encoding, bit slicing, padding |
-| [`drand_runs`](ergasies/drand_runs.py) | Downloads 100 rounds of public randomness from the [drand](https://drand.love) beacon and finds the longest runs of 0s and 1s | HTTP and JSON, hex-to-binary, `itertools.groupby` |
+| [`word_lengths`](src/word_lengths.py) | Cleans a text file, removes pairs of words whose lengths sum to 20, and prints a histogram of the remaining word lengths | Text cleaning, `str.translate`, greedy pairing |
+| [`chess_attacks`](src/chess_attacks.py) | Simulates rounds of a white rook and bishop against a black queen on random squares and scores each side's attacks | Monte Carlo simulation, dataclasses, seeded RNG |
+| [`bit_patterns`](src/bit_patterns.py) | Encodes text as 7-bit codes, packs them into 16-bit numbers, and reports what share is even or divisible by 3, 5 and 7 | Binary encoding, bit slicing, padding |
+| [`drand_runs`](src/drand_runs.py) | Downloads 100 rounds of public randomness from the [drand](https://drand.love) beacon and finds the longest runs of 0s and 1s | HTTP and JSON, hex-to-binary, `itertools.groupby` |
 
 ## Getting started
 
@@ -27,7 +27,7 @@ cd Ergasies
 python -m pip install -e ".[dev]"   # optional: installs the CLI commands and pytest
 ```
 
-You don't need to install anything to run the modules. `python -m ergasies.<module>`
+You don't need to install anything to run the modules. `python -m src.<module>`
 works straight from the repository with Python 3.9 or newer.
 
 ## Usage
@@ -35,7 +35,7 @@ works straight from the repository with Python 3.9 or newer.
 ### Word-length histogram
 
 ```console
-$ python -m ergasies.word_lengths examples/sample.txt
+$ python -m src.word_lengths examples/sample.txt
 Words with  1 letter: 2
 Words with  2 letters: 8
 Words with  3 letters: 7
@@ -46,7 +46,7 @@ Words with 11 letters: 2
 ### Chess attack simulation
 
 ```console
-$ python -m ergasies.chess_attacks --rounds 100 --seed 42
+$ python -m src.chess_attacks --rounds 100 --seed 42
 White score: 15
 Black score: 31
 ```
@@ -72,7 +72,7 @@ original assignment specified.
 ### 16-bit pattern analysis
 
 ```console
-$ python -m ergasies.bit_patterns examples/sample.txt
+$ python -m src.bit_patterns examples/sample.txt
 16-bit numbers: 98
 even              39.80%
 divisible by 3    37.76%
@@ -83,7 +83,7 @@ divisible by 7    11.22%
 ### Runs in drand public randomness
 
 ```console
-$ python -m ergasies.drand_runs --rounds 100
+$ python -m src.drand_runs --rounds 100
 Analysed 25600 bits from 100 rounds
 Longest run of 0s: 19
 Longest run of 1s: 15
@@ -102,7 +102,7 @@ python -m unittest discover -s tests -t .
 ## Project structure
 
 ```text
-ergasies/
+src/
 ├── word_lengths.py     # text cleaning + word-length histogram
 ├── chess_attacks.py    # rook/bishop vs queen Monte Carlo game
 ├── bit_patterns.py     # 7-bit → 16-bit packing and divisibility stats
