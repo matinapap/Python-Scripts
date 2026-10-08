@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ergasies"
+version = "1.0.0"
+description = "Python exercises in text processing, Monte Carlo simulation and randomness analysis."
+readme = "README.md"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "Matina Papadakou" }]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+word-lengths = "ergasies.word_lengths:main"
+chess-attacks = "ergasies.chess_attacks:main"
+bit-patterns = "ergasies.bit_patterns:main"
+drand-runs = "ergasies.drand_runs:main"
+
+[tool.setuptools]
+packages = ["ergasies"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
